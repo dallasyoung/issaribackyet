@@ -55,13 +55,19 @@ function update() {
     else         { body.style.backgroundColor = "green"; }
 
     // INTERVAL TIMER
-    if(diff <= 0) { clearInterval(interval); }
+    if(diff > 0) { if(interval == null) { interval = window.setInterval(update, 1000); } }
+    else                                { clearInterval(interval); interval = null; }
+}
+
+function reset(new_date) {
+    if(new_date == null) { blastoff = saris_actual_return_date; }
+    else                 { blastoff = new Date(new_date); }
+
+    update();
 }
 
 function load() {
     update();
-
-    interval = window.setInterval(update, 1000);
 }
 
 window.onload = load;
