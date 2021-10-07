@@ -30,9 +30,13 @@ function update() {
     if(diff > 0) { document.getElementById("status").innerHTML = "NO"; }
     else         { document.getElementById("status").innerHTML = "!!! YES !!!"; }
     
+    // RETURN LABEL
+    if(diff > 0) { document.getElementById("return-on-label").innerHTML = "The big boy will be back on "; }
+    else         { document.getElementById("return-on-label").innerHTML = ""; }
+
     // RETURN DATE
     if(diff > 0) { document.getElementById("return-on-date").innerHTML = blastoff; }
-    else         { document.getElementById("return-on").innerHTML = ""; }
+    else         { document.getElementById("return-on-date").innerHTML = ""; }
 
     // COUNTDOWN
     document.getElementById("countdown-days").innerHTML = how_many_days_left(diff);
