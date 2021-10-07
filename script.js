@@ -1,4 +1,5 @@
-var blastoff = new Date("October 15, 2021 08:00:00 GMT-0600 (Central Standard Time)");
+const saris_actual_return_date = new Date("October 15, 2021 08:00:00 GMT-0600 (Central Standard Time)");
+var blastoff = saris_actual_return_date;
 
 var interval;
 
